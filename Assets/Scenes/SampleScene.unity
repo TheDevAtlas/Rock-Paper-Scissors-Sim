@@ -376,11 +376,11 @@ MonoBehaviour:
   rockPrefab: {fileID: 2443223259145055517, guid: 6fdf5f2d150eb3f438feea08efed88f4, type: 3}
   paperPrefab: {fileID: 2353681277880494337, guid: 6a8d21b7429c66949aa42ebd47ca0004, type: 3}
   scissorsPrefab: {fileID: 2245740623035125895, guid: 387b041f4ceb4954592d89e2b235f366, type: 3}
-  numberOfRocks: 50
-  numberOfPapers: 50
-  numberOfScissors: 50
-  spawnAreaMin: {x: -5, y: -5}
-  spawnAreaMax: {x: 5, y: 5}
+  numberOfRocks: 100
+  numberOfPapers: 100
+  numberOfScissors: 100
+  spawnAreaMin: {x: 0, y: 0}
+  spawnAreaMax: {x: 0, y: 0}
 --- !u!4 &630417416
 Transform:
   m_ObjectHideFlags: 0

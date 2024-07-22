@@ -13,14 +13,16 @@ public class RockPaperScissorsController : MonoBehaviour
     public Vector2 spawnAreaMin;
     public Vector2 spawnAreaMax;
 
+    public float time = 0.5f;
+
     void Start()
     {
-        SpawnEntities(rockPrefab, numberOfRocks);
-        SpawnEntities(paperPrefab, numberOfPapers);
-        SpawnEntities(scissorsPrefab, numberOfScissors);
+        StartCoroutine(SpawnEntities(rockPrefab, numberOfRocks));
+        StartCoroutine(SpawnEntities(paperPrefab, numberOfPapers));
+        StartCoroutine(SpawnEntities(scissorsPrefab, numberOfScissors));
     }
 
-    void SpawnEntities(GameObject prefab, int count)
+    IEnumerator SpawnEntities(GameObject prefab, int count)
     {
         for (int i = 0; i < count; i++)
         {
@@ -29,6 +31,13 @@ public class RockPaperScissorsController : MonoBehaviour
                 Random.Range(spawnAreaMin.y, spawnAreaMax.y)
             );
             Instantiate(prefab, spawnPosition, Quaternion.identity);
+
+            yield return new WaitForSeconds(time);
         }
+    }
+
+    void Update()
+    {
+        time -= Time.deltaTime / 10f;
     }
 }

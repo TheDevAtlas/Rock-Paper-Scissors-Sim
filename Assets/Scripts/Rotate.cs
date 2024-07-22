@@ -9,5 +9,7 @@ public class Rotate : MonoBehaviour
     void Update()
     {
         transform.Rotate(rotate * Time.deltaTime);
+
+        rotate.x += Time.deltaTime;
     }
 }

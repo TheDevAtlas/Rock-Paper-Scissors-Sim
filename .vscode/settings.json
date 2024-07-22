@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Rock Paper Scissors.sln"
+    "dotnet.defaultSolution": "Rock-Paper-Scissors-Sim.sln"
 }
